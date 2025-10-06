@@ -1,0 +1,106 @@
+-----------------------------------------
+PROJECT ANALYSIS
+-----------------------------------------
+
+PROJECT TITLE:
+Simple Calculator using HTML, CSS, and JavaScript
+
+-----------------------------------------
+1. INTRODUCTION
+-----------------------------------------
+The Simple Calculator is a web-based application designed to perform basic arithmetic operations such as addition, subtraction, multiplication, and division. The system is developed using HTML for structure, CSS for styling, and JavaScript for implementing the calculation logic. It provides users with a clean and interactive interface to perform quick calculations directly from their browser.
+
+-----------------------------------------
+2. OBJECTIVES
+-----------------------------------------
+- To design a user-friendly calculator interface using web technologies.
+- To perform basic mathematical operations efficiently.
+- To understand and implement event handling in JavaScript.
+- To provide a responsive design suitable for both mobile and desktop devices.
+- To enhance practical knowledge of HTML, CSS, and JavaScript integration.
+
+-----------------------------------------
+3. EXISTING SYSTEM
+-----------------------------------------
+The existing system involves manual calculations or the use of physical calculators. Although online calculators exist, this project aims to demonstrate how a custom calculator can be built from scratch using client-side technologies.
+
+-----------------------------------------
+4. PROPOSED SYSTEM
+-----------------------------------------
+The proposed system provides a simple, interactive calculator that works entirely in a web browser. It eliminates the need for any server-side processing. The system allows the user to:
+- Input numbers and operators through clickable buttons.
+- View results instantly on the screen.
+- Clear or delete previous entries.
+The use of JavaScript ensures fast and accurate calculations.
+
+-----------------------------------------
+5. SYSTEM REQUIREMENTS
+-----------------------------------------
+Hardware Requirements:
+- Processor: Minimum 1 GHz
+- RAM: 1 GB or higher
+- Hard Disk: 100 MB free space
+- Display: 1024x768 resolution or above
+
+Software Requirements:
+- Operating System: Windows / macOS / Linux
+- Browser: Chrome, Edge, Firefox, or any modern browser
+- Text Editor: VS Code, Sublime Text, or Notepad++
+
+-----------------------------------------
+6. MODULES
+-----------------------------------------
+1. **UI Module**
+   - Handles the structure and layout of calculator buttons and display.
+   - Built using HTML and CSS.
+
+2. **Logic Module**
+   - Contains all arithmetic operation handling in JavaScript.
+   - Processes user input and updates the display.
+
+3. **Event Handling Module**
+   - Manages button click events.
+   - Triggers corresponding calculations or actions (Clear, Delete, Equals).
+
+-----------------------------------------
+7. WORKING PRINCIPLE
+-----------------------------------------
+- When the user clicks on a number or operator, the input is displayed on the screen.
+- On pressing the equal (‘=’) button, the entered expression is evaluated using JavaScript.
+- The result is shown on the display area.
+- If the user presses the clear button, the display resets to zero.
+- The delete button removes the last entered character.
+
+-----------------------------------------
+8. ADVANTAGES
+-----------------------------------------
+- Lightweight and fast performance.
+- Cross-platform compatibility.
+- Responsive user interface.
+- Easy to modify and expand (e.g., adding scientific operations).
+- No installation or internet connection required.
+
+-----------------------------------------
+9. LIMITATIONS
+-----------------------------------------
+- Only supports basic arithmetic operations.
+- No memory or history feature.
+- Limited error handling for complex expressions.
+
+-----------------------------------------
+10. FUTURE ENHANCEMENTS
+-----------------------------------------
+- Add advanced mathematical functions (square root, percentage, power, etc.).
+- Implement dark and light mode themes.
+- Include keyboard input support.
+- Maintain a history of recent calculations.
+- Improve error handling and input validation.
+
+-----------------------------------------
+11. CONCLUSION
+-----------------------------------------
+The Simple Calculator project demonstrates how web technologies can be used to create a functional and user-friendly application. It provides a solid understanding of integrating HTML, CSS, and JavaScript to build interactive web projects. The calculator serves as a foundation for more advanced projects and applications in web development.
+
+-----------------------------------------
+END OF ANALYSIS
+-----------------------------------------

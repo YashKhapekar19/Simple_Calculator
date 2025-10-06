@@ -1,0 +1,40 @@
+/* Animated glitter background */
+@keyframes glitter {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Body Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(-45deg, #ffc0cb, #b19cd9, #87cefa, #f7c3d1);
+  background-size: 400% 400%;
+  animation: glitter 15s ease infinite;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Calculator display (no text selection) */
+.calculator-display {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Buttons Effects */
+.calculator-btn {
+  transition: all 0.15s ease-in-out;
+}
+
+.calculator-btn:hover {
+  filter: brightness(1.05);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.calculator-btn:active {
+  transform: scale(0.95) translateY(1px);
+  filter: brightness(0.95);
+  transition: transform 0.05s;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}

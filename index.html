@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cute Glitter Calculator</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+
+  <div class="text-center w-full max-w-sm">
+    <!-- Title -->
+    <h1 class="text-5xl font-bold text-white mb-6"
+        style="text-shadow: 2px 2px 6px rgba(0,0,0,0.3);">
+      Calculator
+    </h1>
+
+    <!-- Calculator Body -->
+    <div class="mx-auto bg-white/40 backdrop-blur-lg rounded-3xl shadow-2xl p-6 border border-white/50">
+      
+      <!-- Display Screen -->
+      <div class="bg-gray-100/50 rounded-lg p-4 mb-6 border border-gray-200/80">
+        <input type="text" id="display"
+          class="calculator-display w-full bg-transparent text-gray-800 text-5xl text-right border-none outline-none"
+          readonly placeholder="0">
+      </div>
+
+      <!-- Buttons -->
+      <div class="grid grid-cols-4 gap-4">
+        <!-- Row 1 -->
+        <button class="calculator-btn text-2xl bg-pink-300/80 hover:bg-pink-400/80 text-pink-800 font-bold p-4 rounded-xl shadow-md" onclick="clearDisplay()">C</button>
+        <button class="calculator-btn text-2xl bg-purple-300/80 hover:bg-purple-400/80 text-purple-800 p-4 rounded-xl shadow-md" onclick="appendCharacter('/')">÷</button>
+        <button class="calculator-btn text-2xl bg-purple-300/80 hover:bg-purple-400/80 text-purple-800 p-4 rounded-xl shadow-md" onclick="appendCharacter('*')">×</button>
+        <button class="calculator-btn text-2xl bg-purple-300/80 hover:bg-purple-400/80 text-purple-800 p-4 rounded-xl shadow-md" onclick="deleteLast()">⌫</button>
+
+        <!-- Row 2 -->
+        <button class="calculator-btn text-2xl bg-white/80 hover:bg-white/95 text-gray-800 p-4 rounded-xl shadow-md" onclick="appendCharacter('7')">7</button>
+        <button class="calculator-btn text-2xl bg-white/80 hover:bg-white/95 text-gray-800 p-4 rounded-xl shadow-md" onclick="appendCharacter('8')">8</button>
+        <button class="calculator-btn text-2xl bg-white/80 hover:bg-white/95 text-gray-800 p-4 rounded-xl shadow-md" onclick="appendCharacter('9')">9</button>
+        <button class="calculator-btn text-2xl bg-purple-300/80 hover:bg-purple-400/80 text-purple-800 p-4 rounded-xl shadow-md" onclick="appendCharacter('-')">−</button>
+
+        <!-- Row 3 -->
+        <button class="calculator-btn text-2xl bg-white/80 hover:bg-white/95 text-gray-800 p-4 rounded-xl shadow-md" onclick="appendCharacter('4')">4</button>
+        <button class="calculator-btn text-2xl bg-white/80 hover:bg-white/95 text-gray-800 p-4 rounded-xl shadow-md" onclick="appendCharacter('5')">5</button>
+        <button class="calculator-btn text-2xl bg-white/80 hover:bg-white/95 text-gray-800 p-4 rounded-xl shadow-md" onclick="appendCharacter('6')">6</button>
+        <button class="calculator-btn text-2xl bg-purple-300/80 hover:bg-purple-400/80 text-purple-800 p-4 rounded-xl shadow-md" onclick="appendCharacter('+')">+</button>
+
+        <!-- Row 4 -->
+        <button class="calculator-btn text-2xl bg-white/80 hover:bg-white/95 text-gray-800 p-4 rounded-xl shadow-md" onclick="appendCharacter('1')">1</button>
+        <button class="calculator-btn text-2xl bg-white/80 hover:bg-white/95 text-gray-800 p-4 rounded-xl shadow-md" onclick="appendCharacter('2')">2</button>
+        <button class="calculator-btn text-2xl bg-white/80 hover:bg-white/95 text-gray-800 p-4 rounded-xl shadow-md" onclick="appendCharacter('3')">3</button>
+        <button class="calculator-btn text-2xl bg-cyan-300/80 hover:bg-cyan-400/80 text-cyan-800 font-bold p-4 rounded-xl shadow-md row-span-2" onclick="calculateResult()">=</button>
+
+        <!-- Row 5 -->
+        <button class="calculator-btn text-2xl bg-white/80 hover:bg-white/95 text-gray-800 p-4 rounded-xl shadow-md col-span-2" onclick="appendCharacter('0')">0</button>
+        <button class="calculator-btn text-2xl bg-white/80 hover:bg-white/95 text-gray-800 p-4 rounded-xl shadow-md" onclick="appendCharacter('.')">.</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

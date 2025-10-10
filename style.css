@@ -1,40 +1,62 @@
-/* Animated glitter background */
+/* 🌟 Animated Gradient Background */
 @keyframes glitter {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-/* Body Styling */
+/* 🌈 Body Styling */
 body {
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(-45deg, #ffc0cb, #b19cd9, #87cefa, #f7c3d1);
+  background: linear-gradient(-45deg, #fbc2eb, #a6c1ee, #fad0c4, #ffd1ff);
   background-size: 400% 400%;
-  animation: glitter 15s ease infinite;
+  animation: glitter 18s ease infinite;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   -webkit-tap-highlight-color: transparent;
 }
 
-/* Calculator display (no text selection) */
+/* 🧮 Calculator Display (No Text Selection) */
 .calculator-display {
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  background: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
-/* Buttons Effects */
+/* 🔘 Calculator Buttons */
 .calculator-btn {
-  transition: all 0.15s ease-in-out;
+  background: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 18px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  color: #444;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
+/* ✨ Hover Effect */
 .calculator-btn:hover {
-  filter: brightness(1.05);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  transform: translateY(-3px);
+  background: #f0f0f0;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
 }
 
+/* 💥 Active (Pressed) Effect */
 .calculator-btn:active {
-  transform: scale(0.95) translateY(1px);
-  filter: brightness(0.95);
+  transform: scale(0.97) translateY(1px);
+  background: #e8e8e8;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
   transition: transform 0.05s;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
 }

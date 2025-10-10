@@ -4,16 +4,23 @@ function appendCharacter(char) {
   const lastChar = display.value.slice(-1);
   const operators = ['+', '-', '*', '/'];
 
-  // Prevent multiple operators
+  // Prevent multiple operators in a row
   if (operators.includes(lastChar) && operators.includes(char)) {
     return;
   }
 
-  // Prevent multiple decimals in one number
-  if (char === '.' && display.value.split(/[\+\-\*\/]/).pop().includes('.')) {
+  // Prevent starting with an operator (except '-')
+  if (display.value === '' && operators.includes(char) && char !== '-') {
     return;
   }
 
+  // Prevent multiple decimals in one number
+  const currentNumber = display.value.split(/[\+\-\*\/]/).pop();
+  if (char === '.' && currentNumber.includes('.')) {
+    return;
+  }
+
+  // Append the character
   display.value += char;
 }
 
@@ -27,8 +34,15 @@ function deleteLast() {
 
 function calculateResult() {
   try {
+    if (display.value.trim() === '') return; // Prevent empty evaluation
     let result = eval(display.value);
-    result = parseFloat(result.toPrecision(12)); // handle floating errors
+
+    // Handle invalid or infinite results
+    if (!isFinite(result)) throw new Error('Invalid');
+
+    // Limit decimal precision to avoid floating-point issues
+    result = parseFloat(result.toPrecision(12));
+
     display.value = result;
   } catch (error) {
     display.value = 'Error';
